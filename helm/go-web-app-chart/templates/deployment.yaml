@@ -17,6 +17,7 @@ spec:
     spec:
       containers:
       - name: go-web-app
-        image: khajaehtesham/go-githubactions-repo:{{ .Values.image.tag }}
+        # trunk-ignore(yamllint/syntax)
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         ports:
         - containerPort: 8080
