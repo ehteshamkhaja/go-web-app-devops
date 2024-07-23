@@ -67,6 +67,7 @@ jobs:
       with:
         context: .
         file: ./Dockerfile
+        platforms: linux/arm64
         push: true
         tags: ${{ secrets.DOCKERHUB_USERNAME }}/go-githubactions-repo:${{github.run_id}}
 
